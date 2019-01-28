@@ -1,26 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+
+import NavBar from './components/NavBar';
+import Routes from './components/Routes';
+
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Content = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 20px;
+  font-weight: bold;
+  border-radius: 20px
+  width: 70%;
+  align-self: center;
+  background-color: rebeccapurple;
+  color: lightgray;
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Container className="App">
+        <NavBar />
+        <Content>
+          <Routes />
+        </Content>
+      </Container>
     );
   }
 }
