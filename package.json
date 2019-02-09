@@ -13,6 +13,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "deploy": "aws s3 cp build/ s3://emman-mascarinas.us --recursive",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
