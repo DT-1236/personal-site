@@ -131,8 +131,8 @@ class HomePage extends Component {
         <ProjectName to="/jobly">Jobly</ProjectName>
         <Descriptor>
           A full-stack application for hosting job applications. The front end
-          uses React and showcases use of Compound Components and Render Props.
-          It interacts with an Express.js/Postgres backend
+          uses React and interacts with an Express.js/Postgres backend. A
+          pending branch showcases use of Compound Components and Render Props.
         </Descriptor>
         <ProjectName to="/hos">"Hack-or-Snooze"</ProjectName>
         <Descriptor>
