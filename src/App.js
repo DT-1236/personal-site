@@ -19,10 +19,7 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-  display: flex;
-  align-items: center;
   flex-direction: column;
-  align-self: center;
   width: 100vw;
   height: 100vw;
   margin-top: 10%;
