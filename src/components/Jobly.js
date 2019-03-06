@@ -14,8 +14,8 @@ class Jobly extends Component {
       <Container className="Jobly">
         <p>Under construction</p>
         <p>
-          In the meantime, you can look at the Github{' '}
-          <a href="https://github.com/DT-1236/react-jobly">here</a>
+          In the meantime, you can look at the
+          <a href="https://github.com/DT-1236/react-jobly">{' Jobly Github'}</a>
         </p>
       </Container>
     );

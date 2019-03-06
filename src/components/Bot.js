@@ -14,8 +14,8 @@ class Bot extends Component {
       <Container className="Bot">
         <p>Under construction</p>
         <p>
-          In the meantime, you can look at the Github{' '}
-          <a href="https://github.com/DT-1236/pss_bots">here</a>
+          In the meantime, you can look at the
+          <a href="https://github.com/DT-1236/pss_bots">{' pss_bots Github'}</a>
         </p>
       </Container>
     );

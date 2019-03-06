@@ -14,8 +14,10 @@ class HOS extends Component {
       <Container className="HOS">
         <p>Under construction</p>
         <p>
-          In the meantime, you can look at the Github{' '}
-          <a href="https://github.com/DT-1236/hack-or-snooze">here</a>
+          In the meantime, you can look at the
+          <a href="https://github.com/DT-1236/hack-or-snooze">
+            {" 'Hack-or-Snooze' Github"}
+          </a>
         </p>
       </Container>
     );
