@@ -143,8 +143,7 @@ class About extends Component {
 
         <Blurb>
           So that's that. I'm excited to move forward from here. Thanks for
-          making it all the way to the bottom. I'm excited to move forward from
-          here. Here's a picture of my family
+          making it all the way to the bottom. Here's a picture of my family!
         </Blurb>
       </Container>
     );
