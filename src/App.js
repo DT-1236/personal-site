@@ -9,6 +9,8 @@ const Container = styled.div`
   justify-content: center;
   padding-left: 5px;
   padding-right: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   @media (min-width: 600px) {
     padding-left: 5%;
@@ -30,12 +32,35 @@ const Content = styled.div`
   }
 `;
 
+const MenuContext = React.createContext();
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: false
+    };
+    this.showMenu = this.showMenu.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
+  }
+
+  showMenu() {
+    this.setState({ show: true });
+  }
+
+  closeMenu() {
+    this.setState({ show: false });
+  }
+
   render() {
     return (
       <Container className="App">
-        <NavBar />
-        <Content>
+        <MenuContext.Provider
+          value={{ show: this.showMenu, status: this.state.show }}
+        >
+          <NavBar />
+        </MenuContext.Provider>
+        <Content onClick={this.closeMenu}>
           <Routes />
         </Content>
       </Container>
@@ -44,3 +69,4 @@ class App extends Component {
 }
 
 export default App;
+export { MenuContext };
