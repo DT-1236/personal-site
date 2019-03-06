@@ -25,7 +25,7 @@ const Content = styled.div`
   margin-top: 10%;
 
   @media (min-width: 600px) {
-    width: 80%;
+    width: 90%;
   }
 `;
 
