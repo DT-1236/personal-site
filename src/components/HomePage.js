@@ -112,7 +112,7 @@ class HomePage extends Component {
     const { history } = this.props;
     return (
       <Container>
-        <Ame src={ame} />
+        <Ame src={ame} alt="She has a treat on her nose" />
         <Header>
           <Title>Emman</Title>
           <Title>Mascariñas</Title>
