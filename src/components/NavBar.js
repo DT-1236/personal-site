@@ -126,9 +126,6 @@ class NavBar extends Component {
             )}
           </MenuContext.Consumer>
 
-          <NavItem exact to="/contact">
-            Contact
-          </NavItem>
           <ResumeLink href={resume}>Resume</ResumeLink>
         </ItemContainer>
       </Nav>
