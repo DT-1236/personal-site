@@ -25,19 +25,60 @@ class About extends Component {
     return (
       <Container className="About">
         <p>
-          After 4 years in cancer research and 2 years writing medical notes in
-          hospital emergency departments, I wanted a change of pace. It just so
-          happened that my friends and I wanted a Discord bot to give us
-          game-data, so I ended up going down a rabbit hole. I taught myself
-          Python and got <Link to="/bot">a taste for programming</Link>
+          I'm a full-stack engineer (React.js, Flask/Express, Postgres) who
+          really enjoys the problem-solving aspect of software development.
+          Career-wise, I'm quite interested in adding new skills to my
+          repertoire or improving my work by learning best practices or advanced
+          patterns
         </p>
-        <p>The text from my old, long about section is hidden</p>
-        <p hidden>
-          I was born in the Philippines and emigrated to the US in 1990. I
-          occasionally visit, but I have few memories from there. I grew up in
-          the Chicago area and studied chemistry at a small liberal arts
-          institution called Knox College in Galesburg, IL. There, I met my
-          future wife, Naomi, in the choir.
+        <p>
+          A little more about me - after 4 years in cancer research and 2 years
+          writing medical notes in hospital emergency departments, I wanted a
+          change of pace. It just so happened that my friends and I wanted a
+          Discord bot to give us game-data, so I ended up going down a rabbit
+          hole. I taught myself Python and got{' '}
+          <Link to="/bot">a taste for programming</Link>
+        </p>
+        <p>
+          I was proud enough about it that I showed it to a startup in Milwaukee
+          (DARTChart) and got a job. Though it wasn't initially a technical
+          role, I was able to leverage my newfound Python skills to vastly
+          increase my efficiency. The concepts behind those scripts laid out
+          plans for new features/services, and I got moved to the technical side
+          of the house.
+        </p>
+
+        <p>
+          While I was over there, I supported largely undocumented systems for
+          10+ clients. I even on-boarded 4 new clients and created several novel
+          integrations using Python, sftp, and our existing processes. After a
+          little over a year at DART, I got married and moved to San Francisco.
+          The change in location got me thinking about next steps. After working
+          with some of the more experienced developers at DART, I understood
+          just how, shall we say, unstructured my code could be
+        </p>
+        <p>
+          I decided to beef up on best practices and overall coding ability by
+          enrolling in Rithm School. As part of the course, I completed an
+          internship at Groupmuse. Their mobile app had been around for about a
+          year and a half, and in that time the ubiquitous focus on speed had
+          accrued quite a bit of tech debt. Our primary goal for this internship
+          was to refactor the codebase for readability and maintainability
+        </p>
+        <p>
+          I can concretely say that I got exactly what I wanted out of my time
+          at Rithm. By the end of the internship, we had learned several
+          advanced patterns in React and implemented them in the production
+          codebase. Before our changes, it took us about a day and a half just
+          to nudge a button a few pixels. After our changes, the process was cut
+          down to several minutes - tops. We impressed the CTO with our work,
+          and he's optimistic that any future adjustments to layout can leverage
+          our changes and proceed smoothly
+        </p>
+        <p>
+          So that's that. Thanks for making it all the way to the bottom. I'm
+          excited to move forward from here. Here's a bonus picture of my wife
+          and dog for making it here
         </p>
         <ImgContainer>
           <Img
@@ -45,46 +86,6 @@ class About extends Component {
             alt="Old Main"
           />
         </ImgContainer>
-        <p hidden>
-          After graduation, I worked in a medical research laboratory in
-          Chicago, developing Pancreatic Cancer models. I managed the lab and
-          ran experiments for 5 years. I experienced many aspects of the
-          scientific process. In 2014, Naomi was accepted to medical school at
-          the Medical College of Wisconsin, so we moved to Milwaukee!
-        </p>
-        <ImgContainer>
-          <Img
-            src="https://stadiumjourney.com/wp-content/uploads/2016/07/Miller-Park-Exterior.jpg"
-            alt="Miller Park"
-          />
-        </ImgContainer>
-        <p hidden>
-          There, I worked as a medical scribe alongside MDs as they treated
-          patients in the Emergency Department. I wrote medical notes from
-          scratch and learned to type very quickly. It was around then that I
-          found I enjoy working with computer science logic constructs. In time,
-          decided to pick up Python and find a job in the medical tech sector.
-        </p>
-        <p hidden>
-          I started working for DART Chart helping nursing homes interpret
-          patient contracts and bill Aboutropriate amounts from insurance
-          companies. There, I developed tools to help analysts be more
-          efficient, and assist integrations with increasing our information
-          base. Then, in the summer of 2018, Naomi graduated medical school...
-          So we drove our '93 Camry out to San Francisco!
-        </p>
-        <ImgContainer>
-          <Img
-            src="https://lh3.googleusercontent.com/328uDPLv8cSq_yLh3BL72BTUTdNZf20hv_wYpO4oHTTD1O1RJqOykJ6---H8QGqtn4VcExgHILgp--VsVt_4lGHhA0l4bFdvij_YbUPdfjZyyWBUH6_qRUvWSa7hEyObGuxxUzjPcwV_4SEMQc4DNmmK9vAi02cm3muXuz2BjwaPhjlOx3huhDgudva0zeU9k400yf19SJdwHjXk9Fc5cc2eSZZIGO3OE5F0lu0ytEaiiUJCIi5LW9ixq2uDyc9EPhtTDwlPKLNocu1NtmPXszLguovBNNjgMIuN6CBqB32u5WPCUtgZrXJnpXZLlNE8eAcKKLimX1kYBJfAKqNHplzSO-DjDFK5YNNNbRtgIcccibm7DTYlIZnap5OVJrBUrlQQmIJ_6DQZXJuQIjfpSyrGVcFcgztWMSJBwG0uU9znn44DjILgcG6Y_V_jMD7BAsvGo03WItywhNN50Lf-MplsTNIHxVFnJVz4ZRmDGHpwv4AfqDPqHGt22v4uDT0a_vHFavOK7VDOVRWVrZdAbj0JLtA3tJKJhwjif8454utIlDMbds3fkzfD3Bj3TrN0Q9Hf-GEhEhEV0_OmlbJmZvvDrQzYx3dkQNvvtTk6ocAVIikEAwg9PC94iZM6gSYgqXvqyuLPg3aSTMNPUBIIevrk=w1228-h921-no"
-            alt="Naomi and Ame"
-          />
-        </ImgContainer>
-        <p hidden>
-          I worked remotely with DART Chart for a smooth transition to the Bay
-          Area. Moving forward, I seek to solidify my foundations as a software
-          developer with Rithm, and leverage my experience in medicine and
-          research to find a solid role in Health IT
-        </p>
       </Container>
     );
   }
