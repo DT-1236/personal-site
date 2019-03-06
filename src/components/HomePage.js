@@ -53,7 +53,7 @@ const Descriptor = styled.p`
   text-align: justify;
   padding: 5%;
   @media (min-width: 600px) {
-    width: 40%;
+    width: 50%;
   }
 `;
 
