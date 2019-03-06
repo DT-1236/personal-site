@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -7,9 +7,14 @@ import {
   faLinkedin,
   faAngellist
 } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import ame from '../static/Ame_bust.jpg';
+
+const gitURL = 'https://github.com/DT-1236';
+const linkedURL =
+  'https://www.linkedin.com/in/windel-emman-mascari%C3%B1as-18882a21/';
+const angelURL = 'https://angel.co/windel-emman-tecson-mascarinas';
 
 const Container = styled.div`
   display: flex;
@@ -30,9 +35,9 @@ const Header = styled.div`
   align-self: flex-start;
   margin-bottom: 10%;
 
-  @media (max-width: 600px) {
+  @media (min-width: 600px) {
     margin-top: 5%;
-    margin-left: 5%;
+    width: 60%;
   }
 `;
 
@@ -70,6 +75,7 @@ const Ame = styled.img`
   top: 10%;
   right: 5%;
   position: fixed;
+  z-index: -10;
   @media (min-width: 600px) {
     position: absolute;
     width: 30%;
@@ -97,8 +103,13 @@ const FAIcon = styled(FontAwesomeIcon)`
   font-size: 1.2rem;
 `;
 
+const IconLink = styled.a`
+  color: black;
+`;
+
 class HomePage extends Component {
   render() {
+    const { history } = this.props;
     return (
       <Container>
         <Ame src={ame} />
@@ -107,16 +118,37 @@ class HomePage extends Component {
           <Title>Mascariñas</Title>
           <Icons>
             <Icon>
-              <FAIcon icon={faGithub} />
+              <IconLink href={gitURL}>
+                <FAIcon icon={faGithub} />
+              </IconLink>
             </Icon>
             <Icon>
-              <FAIcon icon={faLinkedin} />
+              <FAIcon
+                icon={faLinkedin}
+                onClick={() => history.push(linkedURL)}
+              />
             </Icon>
             <Icon>
-              <FAIcon icon={faAngellist} />
+              <IconLink href={angelURL}>
+                <FAIcon
+                  icon={faAngellist}
+                  onClick={() => history.push(angelURL)}
+                />
+              </IconLink>
             </Icon>
             <Icon>
-              <FAIcon icon={faEnvelope} />
+              <FAIcon
+                icon={faEnvelope}
+                onClick={() =>
+                  window.prompt('My email', 'WEMascarinas@gmail.com')
+                }
+              />
+            </Icon>
+            <Icon>
+              <FAIcon
+                icon={faPhone}
+                onClick={() => window.prompt('My phone number', '630-267-8899')}
+              />
             </Icon>
           </Icons>
         </Header>
@@ -146,4 +178,4 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage;
+export default withRouter(HomePage);
