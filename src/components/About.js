@@ -2,34 +2,44 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import dart from '../static/dart.jpg';
+import bust from '../static/smiling_bust.jpg';
+
 const ImgContainer = styled.div`
   display: flex;
   justify-content: center;
+  height: 35vw;
+  /* border: 2px solid black; */
+  align-items: center;
 `;
 
 const Img = styled.img`
-  max-height: 50vw;
+  max-height: 35vw;
   max-width: 90%;
   object-fit: contain;
   border-radius: 5px;
 `;
 
 const Container = styled.div`
-  display: flex;
+  margin-top: 5vh;
   flex-direction: column;
   align-items: center;
+  text-align: justify;
 `;
 
 class About extends Component {
   render() {
     return (
       <Container className="About">
+        <ImgContainer>
+          <Img src={bust} alt="Me" style={{ borderRadius: '50%' }} />
+        </ImgContainer>
+
         <p>
-          I'm a full-stack engineer (React.js, Flask/Express, Postgres) who
-          really enjoys the problem-solving aspect of software development.
-          Career-wise, I'm quite interested in adding new skills to my
-          repertoire or improving my work by learning best practices or advanced
-          patterns
+          I'm a full-stack engineer who really enjoys the problem-solving aspect
+          of software development. Career-wise, I'm quite interested in adding
+          new skills to my repertoire and improving my work by learning best
+          practices or advanced patterns
         </p>
         <p>
           A little more about me - after 4 years in cancer research and 2 years
@@ -39,6 +49,7 @@ class About extends Component {
           hole. I taught myself Python and got{' '}
           <Link to="/bot">a taste for programming</Link>
         </p>
+
         <p>
           I was proud enough about it that I showed it to a startup in Milwaukee
           (DARTChart) and got a job. Though it wasn't initially a technical
@@ -47,6 +58,9 @@ class About extends Component {
           plans for new features/services, and I got moved to the technical side
           of the house.
         </p>
+        <ImgContainer>
+          <Img src={dart} alt="DART Logo" />
+        </ImgContainer>
 
         <p>
           While I was over there, I supported largely undocumented systems for
@@ -80,12 +94,6 @@ class About extends Component {
           excited to move forward from here. Here's a bonus picture of my wife
           and dog for making it here
         </p>
-        <ImgContainer>
-          <Img
-            src="https://www.knox.edu/images/_News/news_media/img/2018/old-main-sky-158393.jpg"
-            alt="Old Main"
-          />
-        </ImgContainer>
       </Container>
     );
   }
