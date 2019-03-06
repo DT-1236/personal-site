@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const ImgContainer = styled.div`
@@ -23,6 +24,13 @@ class About extends Component {
   render() {
     return (
       <Container className="About">
+        <p>
+          After 4 years in cancer research and 2 years writing medical notes in
+          hospital emergency departments, I wanted a change of pace. It just so
+          happened that my friends and I wanted a Discord bot to give us
+          game-data, so I ended up going down a rabbit hole. I taught myself
+          Python and got <Link to="/bot">a taste for programming</Link>
+        </p>
         <p>The text from my old, long about section is hidden</p>
         <p hidden>
           I was born in the Philippines and emigrated to the US in 1990. I
