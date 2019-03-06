@@ -15,6 +15,7 @@ const Nav = styled.nav`
   align-items: center;
   font-size: 1rem;
   position: fixed;
+  top: 0;
   z-index: 1;
   box-shadow 1px 1px 18px #4683b451;
 `;
