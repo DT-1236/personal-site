@@ -49,13 +49,16 @@ const Img = styled.img`
   max-width: 90%;
   object-fit: contain;
   border-radius: 5px;
-  &.active {
-    position: fixed;
-    left: 10vw;
-    top: 10vh;
-    max-height: 100vh;
-    border-radius: 0px;
-    border: 5px solid lightgray;
+
+  @media (min-width: 600px) {
+    &.active {
+      position: fixed;
+      left: 10vw;
+      top: 10vh;
+      max-height: 80vh;
+      width: 80vw;
+      border-radius: 0px;
+    }
   }
 `;
 
