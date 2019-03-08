@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Component } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -34,7 +34,6 @@ const Subheading = styled.h4`
 `;
 
 const ImgContainer = styled.div`
-  display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 5vh;
@@ -43,6 +42,16 @@ const ImgContainer = styled.div`
     flex-direction: row;
     height: 50%;
   }
+
+  &.active {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: blue;
+    align-self: center;
+    justify-self: center;
+    top: 0;
+  }
 `;
 
 const Img = styled.img`
@@ -50,12 +59,48 @@ const Img = styled.img`
   max-width: 90%;
   object-fit: contain;
   border-radius: 5px;
+  &.active {
+    position: fixed;
+    max-height: 100vh;
+    border-radius: 0px;
+  }
 `;
 
 class ProjectTemplate extends PureComponent {
-  static Container = class extends PureComponent {
+  static Container = class extends Component {
+    constructor(props) {
+      super(props);
+      this.enlarged = null;
+      this.resizePicture = this.resizePicture.bind(this);
+    }
+
+    resizePicture(event) {
+      if (this.enlarged) {
+        let classes = this.enlarged.className.split(' ');
+        this.enlarged.className = classes.slice(0, -1).join(' ');
+        const parent = this.enlarged.parentNode;
+        classes = parent.className.split(' ');
+        parent.className = classes.slice(0, -1).join(' ');
+        console.log('Undoing', this.enlarged);
+        this.enlarged = null;
+        return;
+      }
+      if (event.target.tagName === 'IMG' && !this.enlarged) {
+        console.log('Clicking', this.enlarged);
+        event.target.className += ' active';
+        event.target.parentNode.className += ' active';
+        this.enlarged = event.target;
+      }
+    }
+
     render() {
-      return <Container {...this.props} />;
+      return (
+        <Container
+          className={this.enlarged ? 'hidden' : ''}
+          {...this.props}
+          onClick={this.resizePicture}
+        />
+      );
     }
   };
 
