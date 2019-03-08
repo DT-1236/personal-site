@@ -9,7 +9,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
-import ame from '../static/Ame_bust.jpg';
+import ame from '../static/homePage/Ame_bust.jpg';
 
 const gitURL = 'https://github.com/DT-1236';
 const linkedURL =

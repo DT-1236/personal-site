@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import dart from '../static/dart.jpg';
-import bust from '../static/smiling_bust.jpg';
-import pss from '../static/pss_collage.png';
-import game from '../static/pss_ss.jpg';
-import rithm from '../static/rithm_logo.svg';
-import groupmuse from '../static/groupmuse_logo.png';
-import bonus from '../static/ame_and_naomi.jpg';
+import dart from '../static/about/dart.jpg';
+import bust from '../static/about/smiling_bust.jpg';
+import pss from '../static/about/pss_collage.png';
+import game from '../static/about/pss_ss.jpg';
+import rithm from '../static/about/rithm_logo.svg';
+import groupmuse from '../static/about/groupmuse_logo.png';
+import bonus from '../static/about/ame_and_naomi.jpg';
 
 const ImgContainer = styled.div`
   display: flex;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink, withRouter, Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import resume from '../static/resume.pdf';
+import resume from '../static/navBar/resume.pdf';
 import { MenuContext } from '../App';
 
 const Nav = styled.nav`
