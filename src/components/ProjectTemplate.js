@@ -42,16 +42,6 @@ const ImgContainer = styled.div`
     flex-direction: row;
     height: 50%;
   }
-
-  &.active {
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    background-color: blue;
-    align-self: center;
-    justify-self: center;
-    top: 0;
-  }
 `;
 
 const Img = styled.img`
@@ -61,8 +51,11 @@ const Img = styled.img`
   border-radius: 5px;
   &.active {
     position: fixed;
+    left: 10vw;
+    top: 10vh;
     max-height: 100vh;
     border-radius: 0px;
+    border: 5px solid lightgray;
   }
 `;
 
@@ -78,29 +71,17 @@ class ProjectTemplate extends PureComponent {
       if (this.enlarged) {
         let classes = this.enlarged.className.split(' ');
         this.enlarged.className = classes.slice(0, -1).join(' ');
-        const parent = this.enlarged.parentNode;
-        classes = parent.className.split(' ');
-        parent.className = classes.slice(0, -1).join(' ');
-        console.log('Undoing', this.enlarged);
         this.enlarged = null;
         return;
       }
       if (event.target.tagName === 'IMG' && !this.enlarged) {
-        console.log('Clicking', this.enlarged);
         event.target.className += ' active';
-        event.target.parentNode.className += ' active';
         this.enlarged = event.target;
       }
     }
 
     render() {
-      return (
-        <Container
-          className={this.enlarged ? 'hidden' : ''}
-          {...this.props}
-          onClick={this.resizePicture}
-        />
-      );
+      return <Container {...this.props} onClick={this.resizePicture} />;
     }
   };
 
