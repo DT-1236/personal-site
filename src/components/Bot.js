@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+
+import PT from './ProjectTemplate';
 
 import pssLogo from '../static/projectBots/pss_logo.png';
 import averages from '../static/projectBots/averages.png';
@@ -14,64 +15,14 @@ import recipes3 from '../static/projectBots/recipes3.png';
 import recipient from '../static/projectBots/recipient.png';
 import trophies from '../static/projectBots/trophies.png';
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-`;
-
-const Title = styled.h1`
-  margin: 0;
-  font-size: 3rem;
-  color: black;
-`;
-
-const Heading = styled.h3`
-  font-size: 1.5rem;
-  align-self: flex-start;
-`;
-
-const Technologies = styled.h5`
-  align-self: flex-start;
-  font-size: 0.5rem;
-  font-style: italic;
-  font-weight: lighter;
-`;
-
-const Category = styled.h4`
-  font-size: 1.25rem;
-  font-weight: bold;
-  align-self: flex-start;
-`;
-
-const ImgContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 5vh;
-  align-items: center;
-  @media (min-width: 600px) {
-    flex-direction: row;
-    height: 50%;
-  }
-`;
-
-const Img = styled.img`
-  max-height: 35vh;
-  max-width: 90%;
-  object-fit: contain;
-  border-radius: 5px;
-`;
-
 class Bot extends Component {
   render() {
     return (
-      <Container className="Bot">
-        <Title>Discord Bots</Title>
-        <ImgContainer style={{ marginBottom: '5vh' }}>
-          <Img src={pssLogo} />
-        </ImgContainer>
+      <PT.Container className="Bot">
+        <PT.Title>Discord Bots</PT.Title>
+        <PT.ImgContainer style={{ marginBottom: '5vh' }}>
+          <PT.Img src={pssLogo} />
+        </PT.ImgContainer>
         <p>
           Pixel Starships (PSS) was the game that started it. By programming AI
           commands for crew, I was able to dispel the idea that programming
@@ -79,7 +30,7 @@ class Bot extends Component {
           Discord community. Here are some relevant game mechanics to provide
           context:
         </p>
-        <Category>Character Prestige</Category>
+        <PT.Subheading>Character Prestige</PT.Subheading>
         <p>
           Two characters could be combined to form a higher grade character.
           Outcomes changed with game versions, and a complete list of
@@ -87,7 +38,7 @@ class Bot extends Component {
           resources to prestige, so having an unexpected outcome could be
           catastrophic
         </p>
-        <Category>Character Stats / Equipment</Category>
+        <PT.Subheading>Character Stats / Equipment</PT.Subheading>
         <p>
           Characters had differing base stats and differing equipment slots. A
           character with slightly inferior base stats may end up being superior
@@ -95,7 +46,7 @@ class Bot extends Component {
           potential. Because of these possible differences, choosing the optimal
           crew was challenging
         </p>
-        <Category>Character Borrowing</Category>
+        <PT.Subheading>Character Borrowing</PT.Subheading>
         <p>
           Players can lend some of their crew to the alliance pool and allow
           other members to use them. There was no way to assign a recipient.
@@ -103,7 +54,7 @@ class Bot extends Component {
           accidentally taking the wrong crew member could cripple an alliance
           member
         </p>
-        <Category>Alliance Politics</Category>
+        <PT.Subheading>Alliance Politics</PT.Subheading>
         <p>
           End-of-season ladder scoring was based on total trophy count of all
           alliance members. As such, there was an end-of-season rush to make
@@ -112,12 +63,12 @@ class Bot extends Component {
           potential - especially since players could change their ship names
         </p>
 
-        <Heading>PSS Bot</Heading>
-        <Technologies>
+        <PT.Heading>PSS Bot</PT.Heading>
+        <PT.Technologies>
           Python, discord.py, requests, fuzzy-wuzzy (fuzzy searching)
-        </Technologies>
+        </PT.Technologies>
 
-        <Category>Character / Equipment Information</Category>
+        <PT.Subheading>Character / Equipment Information</PT.Subheading>
 
         <p>
           PSS Bot did an initial round of API queries on starting and kept the
@@ -130,46 +81,46 @@ class Bot extends Component {
           Overall, it made decisions regarding crew optimization and prestige
           significantly easier
         </p>
-        <ImgContainer>
-          <Img src={recipes1} alt="Possible prestige routes" />
-          <Img src={recipes2} alt="Possible ways to obtain this crew" />
-        </ImgContainer>
-        <ImgContainer>
-          <Img src={recipes3} alt="Legend" />
-        </ImgContainer>
+        <PT.ImgContainer>
+          <PT.Img src={recipes1} alt="Possible prestige routes" />
+          <PT.Img src={recipes2} alt="Possible ways to obtain this crew" />
+        </PT.ImgContainer>
+        <PT.ImgContainer>
+          <PT.Img src={recipes3} alt="Legend" />
+        </PT.ImgContainer>
         <p>
           From the comfort of the Discord channel, a player could query a
           character and get information regarding all prestige combinations
           using or resulting in that character
         </p>
-        <ImgContainer>
-          <Img src={gearBestInSlot} alt="Stats with best-in-slot gear" />
-          <Img src={baseStats} alt="Base stats of a crew member" />
-        </ImgContainer>
+        <PT.ImgContainer>
+          <PT.Img src={gearBestInSlot} alt="Stats with best-in-slot gear" />
+          <PT.Img src={baseStats} alt="Base stats of a crew member" />
+        </PT.ImgContainer>
 
         <p>
           It would also give base stats as well as all possible stats given the
           current best-in-slot gear and a reasonable amount of training
         </p>
-        <ImgContainer>
-          <Img src={comparisons1} alt="Comparing base stats" />
-          <Img
+        <PT.ImgContainer>
+          <PT.Img src={comparisons1} alt="Comparing base stats" />
+          <PT.Img
             src={comparisons2}
             alt="Comparing stats with best-in-slot gear"
           />
-        </ImgContainer>
+        </PT.ImgContainer>
 
         <p>
           If two characters were given, it would offer a comparison of base
           stats and best stats with best-in-slot gear
         </p>
 
-        <Heading>Council Bot</Heading>
-        <Technologies>
+        <PT.Heading>Council Bot</PT.Heading>
+        <PT.Technologies>
           Python, discord.py, requests, fuzzy-wuzzy, MS SQL, pyodbc, Matplotlib
-        </Technologies>
+        </PT.Technologies>
 
-        <Category>Alliance / Trophy Information</Category>
+        <PT.Subheading>Alliance / Trophy Information</PT.Subheading>
         <p>
           Council bot helped in making decisions around alliance
           metrics/politics. It queried the PSS API for the current trophy count
@@ -182,9 +133,9 @@ class Bot extends Component {
           giving metrics that could evaluate playing ability and/or
           trustworthiness
         </p>
-        <ImgContainer>
-          <Img src={history} alt="Player alliance history" />
-        </ImgContainer>
+        <PT.ImgContainer>
+          <PT.Img src={history} alt="Player alliance history" />
+        </PT.ImgContainer>
         <p>
           Again, final scoring was based off of <b>verbal</b> agreements between
           players to join specific alliances at the end of the season. The
@@ -197,13 +148,13 @@ class Bot extends Component {
           intention with a grain of salt
         </p>
 
-        <ImgContainer>
-          <Img src={trophies} alt="Trophy count over time for player(s)" />
-          <Img
+        <PT.ImgContainer>
+          <PT.Img src={trophies} alt="Trophy count over time for player(s)" />
+          <PT.Img
             src={averages}
             alt="Average player trophy count in alliance(s) over time"
           />
-        </ImgContainer>
+        </PT.ImgContainer>
 
         <p>
           The trophy count over time helped leadership determine a candidate's
@@ -211,11 +162,11 @@ class Bot extends Component {
           player trophy count
         </p>
 
-        <Category>Crew Recipient</Category>
+        <PT.Subheading>Crew Recipient</PT.Subheading>
 
-        <ImgContainer>
-          <Img src={recipient} alt="Receiving members of loaned crew" />
-        </ImgContainer>
+        <PT.ImgContainer>
+          <PT.Img src={recipient} alt="Receiving members of loaned crew" />
+        </PT.ImgContainer>
 
         <p>
           Council Bot could take a given ShipID and identify the receiving
@@ -226,12 +177,10 @@ class Bot extends Component {
         </p>
 
         <p>
-          If you want to look deeper into it, you can take a look at the
-          <a href="https://github.com/DT-1236/pss_bots">
-            {' pss_bots repository'}
-          </a>
+          For a closer look, check out the
+          <a href="https://github.com/DT-1236/pss_bots">{' repository'}</a>
         </p>
-      </Container>
+      </PT.Container>
     );
   }
 }
